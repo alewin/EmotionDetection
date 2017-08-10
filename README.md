@@ -1,2 +1,1 @@
-# EmotionDetection
-Emotion detection using Microsoft Cognitive
+# EmotionDetection Server Client upload
