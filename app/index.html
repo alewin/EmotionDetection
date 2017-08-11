@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="app">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Kairos App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="resources/css/app.css">
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+
+
+  <link rel="stylesheet" href="resources/bower/video.js/dist/video-js.min.css" />
+
+</head>
+
+<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+
+<body>
+
+  <div layout="column" layout-fill id="masterdiv" class="">
+    <!--<div layout="column" id="submasterdiv" class="overflow" layout-fill>-->
+
+    <myheader></myheader>
+    <div ng-view id="appview"></div>
+
+
+
+    <span flex></span>
+    <erfooter></erfooter>
+
+    <!--</div>-->
+  </div>
+
+
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js"></script>
+
+  <!-- Custom js Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <link rel="stylesheet" href="resources/bower/lf-ng-md-file-input/dist/lf-ng-md-file-input.css">
+  <script src="resources/bower/lf-ng-md-file-input/dist/lf-ng-md-file-input.js"></script>
+  
+  
+
+
+
+
+  <script src="resources/bower/video.js/dist/video.min.js"></script>
+  <script src="resources/bower/vjs-video/dist/vjs-video.min.js"></script>
+
+
+  <script src="app.js"></script>
+  <script src="./components/controllers/HeaderController.js"></script>
+
+
+
+  <script src="./components/controllers/UploadController.js"></script>
+  <script src="./components/controllers/AuthController.js"></script>
+  <script src="./components/controllers/VideosController.js"></script>
+  <script src="./components/services/VideoService.js"></script>
+  <script src="./components/services/AuthService.js"></script>
+  <script src="./components/controllers/VideoController.js"></script>
+
+
+
+</body>
+
+</html>

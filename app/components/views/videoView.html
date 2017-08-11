@@ -1,0 +1,85 @@
+<div layout="row" layout-xs="column" layout-margin layout-fill>
+  <div flex="100" flex-gt-xs="5" layout="row" layout-gt-xs="column"></div>
+  <div flex="100" flex-gt-xs="90">
+    <div layout-gt-sm="row" class="md-whiteframe-3dp" layout="column">
+      <div flex-gt-sm="100" flex>
+        <md-toolbar layout="row" class="md-primary">
+          <div class="md-toolbar-tools">
+            <h1>Video</h1> <span flex></span>
+          </div>
+        </md-toolbar>
+        <md-content class="contentpad">
+      
+
+
+<video controls="controls" name="Video Name" src="{{videoinfo.src | trusted}}"></video>
+
+          <div layout-gt-sm="row" layout-padding>
+            <md-input-container flex="80">
+              <label>Title</label>
+              <input ng-model="videoinfo.title" type="text">
+            </md-input-container>
+
+
+            <md-input-container flex="20">
+              <label>Gender</label>
+              <md-select multiple ng-model="video.gender" required>
+                <md-option value="male">Male</md-option>
+                <md-option value="female">Female</md-option>
+                <md-option value="all">All</md-option>
+              </md-select>
+
+            </md-input-container>
+          </div>
+          <div layout-gt-sm="row" layout-padding>
+
+            <md-input-container flex="100">
+              <label>Age</label>
+              <md-select multiple ng-model="video.age" required>
+                <md-option value="0112">1-12</md-option>
+                <md-option value="1317">13-17</md-option>
+                <md-option value="1924">19-24</md-option>
+                <md-option value="2534">25-34</md-option>
+                <md-option value="3544">35-44</md-option>
+                <md-option value="4554">45-54</md-option>
+                <md-option value="5565">50-70</md-option>
+                <md-option value="6599">33-40</md-option>
+                <md-option value="all">All</md-option>
+              </md-select>
+
+            </md-input-container>
+
+            <md-input-container flex="100">
+              <label>Glasses</label>
+              <md-select multiple ng-model="video.glasses" required>
+                <md-option value="yes">Yes</md-option>
+                <md-option value="no">No</md-option>
+                <md-option value="all">All</md-option>
+              </md-select>
+
+            </md-input-container>
+
+
+            <md-input-container flex="100">
+              <label>Ethnicity</label>
+              <md-select multiple ng-model="video.ethnicity" required>
+                <md-option value="white">White</md-option>
+                <md-option value="hispanic">Hispanic</md-option>
+                <md-option value="asian">Asian</md-option>
+                <md-option value="black">Black</md-option>
+                <md-option value="other">Other</md-option>
+                <md-option value="all">All</md-option>
+
+              </md-select>
+
+            </md-input-container>
+
+
+          </div>
+
+        </md-content>
+      </div>
+    </div>
+  </div>
+  <div flex="100" flex-gt-xs="5" layout="row" layout-gt-xs="column"></div>
+</div>

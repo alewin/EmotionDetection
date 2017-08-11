@@ -1,0 +1,85 @@
+<div>
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <a ng-href="#/dashboard">
+                <h1>Kairos Admin</h1>
+            </a>
+            <div layout="row" ng-show="headerCtrl.isLogged()" hide show-gt-xs>
+                   <md-button ng-href="#/dashboard">Dashboard</md-button>
+                <md-button ng-href="#/videos">Videos</md-button>
+                <md-button ng-href="#/upload">Upload</md-button>
+            </div>
+            <span flex></span>
+            <div layout="row" hide show-gt-xs>
+                <div ng-show="headerCtrl.isLogged()">
+                    <md-menu md-position-mode="target-right target">
+                        <md-button aria-label="Kairos Admin Menu" ng-click="$mdOpenMenu($event)">
+                            User
+                            <md-icon md-menu-origin class="material-icons">account_circle</md-icon>
+                        </md-button>
+                        <md-menu-content width="4">
+
+                            <md-divider></md-divider>
+                            <md-menu-item md-ink-ripple="#3F51B5">
+                                <md-button aria-label="Log Out" ng-click="headerCtrl.logOut()">
+                                    <div layout="row" flex>
+                                        <md-icon md-menu-origin class="material-icons">eject</md-icon>
+                                        Log Out
+                                    </div>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div layout="row" ng-show="headerCtrl.isLogged()" layout-align="end center">
+                <div hide-gt-xs class="pull-right">
+                    <md-button ng-click="headerCtrl.openSideNav()" class="md-icon-button">
+                        <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+
+    <!--The sidenav starts here-->
+
+    <md-sidenav md-component-id="right-menu" class="md-sidenav-left md-whiteframe-z2" flex ng-show="headerCtrl.isLogged()">
+        <div class="md-toolbar-tools">
+            <h2>Kairos Admin Menu</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="headerCtrl.closeSideNav()">
+                <md-icon class="material-icons">close</md-icon>
+            </md-button>
+        </div>
+        <md-divider></md-divider>
+        <md-list>
+            <a ng-href="#/videos" ng-click="headerCtrl.closeSideNav()" class="sideNav">
+                <md-list-item md-ink-ripple="#3F51B5" class="pointer">
+                    <md-icon class="material-icons">event</md-icon>
+                    <p>Videos</p>
+                </md-list-item>
+            </a>
+            <md-divider md-inset></md-divider>
+            <a ng-href="#/upload" ng-click="headerCtrl.closeSideNav()" class="sideNav">
+                <md-list-item md-ink-ripple="#3F51B5" class="pointer">
+                    <md-icon class="material-icons">help</md-icon>
+                    <p>Upload</p>
+                </md-list-item>
+            </a>
+            <md-divider md-inset></md-divider>
+            <div ng-show="headerCtrl.isLogged()">
+
+                <md-divider md-inset></md-divider>
+                <a  ng-click="headerCtrl.logOut()" class="sideNav">
+                    <md-list-item md-ink-ripple="#3F51B5" class="pointer">
+                        <md-icon aria-label="a" class="material-icons">eject</md-icon>
+                        <p>Log Out</p>
+                    </md-list-item>
+                </a>
+            </div>
+            <md-divider md-inset></md-divider>
+        </md-list>
+    </md-sidenav>
+</div>

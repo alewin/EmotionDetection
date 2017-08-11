@@ -1,0 +1,45 @@
+<div layout="row" layout-xs="column" layout-margin layout-fill>
+    <div flex="100" flex-gt-xs="10" layout="row" layout-gt-xs="column"></div>
+    <div flex="100" flex-gt-xs="80">
+        <div layout-gt-sm="row" class="md-whiteframe-3dp" layout="column">
+            <div flex-gt-sm="100" flex>
+                <md-toolbar layout="row" class="md-primary">
+                    <div class="md-toolbar-tools">
+                        <h1>Videos</h1> <span flex></span>
+                    </div>
+                </md-toolbar>
+                <md-progress-linear md-model="query" ng-show="loading"></md-progress-linear>
+
+                <md-content>
+                    <md-list flex>
+                        <div layout="row">
+                            <div flex="5"></div>
+                            <div flex="90">
+                                <md-input-container class="md-block" flex-gt-sm ng-hide="loading">
+                                    <label>{{videosQueryStatus}}</label>
+                                    <input ng-model="searchVideos"> </md-input-container>
+                            </div>
+                            <div flex="5"></div>
+                        </div>
+
+                        <md-list-item class="md-3-line" ng-repeat="video in videos | filter:searchVideos" ng-href="#/video/{{video.id}}">
+                            <div class="md-avatar">
+
+                                
+                            </div>
+                            <div class="md-list-item-text" layout="column">
+
+
+                                <p>{{video.title}}</p>
+                                <p>{{video.code}}</p>
+                            </div>
+                        </md-list-item>
+
+                        <md-divider></md-divider>
+                    </md-list>
+                </md-content>
+            </div>
+        </div>
+    </div>
+    <div flex="100" flex-gt-xs="10" layout="row" layout-gt-xs="column"></div>
+</div>
